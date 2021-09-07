@@ -1,4 +1,4 @@
-const { or, and, calculateTruthTable } = require('../utils/truthTableHelpers');
+const { or, and, calculateTruthTable } = require('../../utils/truthTableHelpers');
 
 // Implement the imported helper functions from line 1
 //    Read the export file for the explanation of how they work

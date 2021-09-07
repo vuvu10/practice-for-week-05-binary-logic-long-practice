@@ -21,10 +21,8 @@ const binaryStringToArray = str => {
   return binary8bitStr.split(',');
 };
 
-const binaryStringToArray = str => {
-
-  // Your code here...
-
+const binaryToAscii = str => {
+  // Your code here
 };
 
 /******************************************************************************/
