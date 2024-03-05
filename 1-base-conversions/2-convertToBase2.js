@@ -4,6 +4,13 @@
 
 const convertToBase2 = element => {
   // Your code here
+  if (typeof element === 'string' && element.startsWith('0x')) {
+    const decimalNumber = parseInt(element, 16);
+    return '0b' + decimalNumber.toString(2);
+  } else {
+    const decimalNumber = Number(element);
+    return '0b' + decimalNumber.toString(2);
+  }
 };
 
 /******************************************************************************/
