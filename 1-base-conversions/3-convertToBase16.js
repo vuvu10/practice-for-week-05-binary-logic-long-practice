@@ -4,6 +4,26 @@
 
 const convertToBase16 = element => {
   // Your code here
+  if (typeof element === 'string' && element.startsWith('0b')) {
+
+    element = parseInt(element.slice(2), 2);
+  }
+
+  if (isNaN(element) || element < 0) {
+    throw new Error('Invalid input. Please provide a positive number');
+  }
+
+  const hexDigits = '0123456789abcdef';
+  let hexString = "";
+  while (element > 0) {
+    const remainder = element % 16;
+    hexString = hexDigits[remainder] + hexString;
+    element = Math.floor(element / 16);
+  }
+  return `0x${hexString}`;
+
+
+
 };
 
 /******************************************************************************/
