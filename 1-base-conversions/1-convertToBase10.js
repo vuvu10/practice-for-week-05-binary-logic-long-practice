@@ -4,6 +4,19 @@
 
 const convertToBase10 = str => {
   // Your code here
+
+  if (str.startsWith('0b')) {
+    const binaryString = str.slice(2);
+    return parseInt(binaryString, 2);
+  } else if (str.startsWith('0x')) {
+    const hexString = str.slice(2);
+    return parseInt(hexString, 16);
+  } else {
+    return NaN;
+  }
+
+
+
 };
 
 /******************************************************************************/
